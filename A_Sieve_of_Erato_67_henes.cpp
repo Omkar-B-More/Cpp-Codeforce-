@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define ll long long
+
+void solve() {
+    int n;
+    cin>>n;
+    int a[n],c=0;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        if(a[i]==67){
+            c++;
+        }
+    }
+    if(c>=1){
+        cout<<"YES\n";
+    }
+    else{
+        cout<<"NO\n";
+    }
+}
+
+int main() {
+    fast_io;
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
