@@ -10,11 +10,11 @@ void solve() {
     for(int i=0;i<2*n;i++){
         int h=1;
         for(int j=0;j<2*n;j++){
-        if(h==1||h==2){
+        if(h%2!=0){
             h++;
             cout<<"#";
         }
-        else if(h==3||h==4){
+        else{
             h++;
             cout<<".";
         }

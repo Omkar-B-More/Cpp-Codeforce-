@@ -5,7 +5,7 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    int n,s,ans,ans1,ans2;
+    int n,s,ans;
     cin>>n>>s;
     int a[n];
     for(int i=0;i<n;i++){

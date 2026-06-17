@@ -7,16 +7,22 @@ using namespace std;
 void solve() {
     int n=4,k=2,c=0;
     cin>>n>>k;
-    int a[4];
+    int a[n],temp=k;
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
     // a[0]=0,a[1]=1,a[2]=0,a[3]=1;
-    for(int i=0;i<n;i++){
-        if(a[i]==0){
+    for(int i=0;i<n;){
+       while(temp--){
+        if(a[i]==0&&i%2==1){
             c++;
-            i+=k;
         }
+        else if(a[i]==1&&i%2==1){
+            c--;
+        }
+        else if(i%)
+        i++;
+       }
     }
     cout<<c<<"\n";
 }
