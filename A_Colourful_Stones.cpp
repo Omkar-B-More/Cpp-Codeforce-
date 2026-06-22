@@ -13,7 +13,7 @@ void solve() {
             ans++;
         }
     }
-    cout<<ans;
+    cout<<ans+1;
 
 }
 
