@@ -7,18 +7,46 @@ using namespace std;
 void solve() {
     int n;
     cin>>n;
-    for(int i=0;i<2*n;i++){
-        int h=1;
-        for(int j=0;j<2*n;j++){
-        if(h%2!=0){
-            h++;
-            cout<<"#";
+    int ds=1;
+
+    int dgg=0;
+    for(int i=1;i<=2*n;i++){
+        int dg=0;
+        int d=2;
+        for(int j=1;j<=2*n;j++){
+            if(ds%2!=0){
+                if(d!=0){
+                    cout<<"#";
+                    d--;
+                }
+                else {
+                    cout<<".";
+                    dg++;
+                }
+                if(dg==2){
+                    d=2;
+                    dg=0;
+                }
+            }
+            else{
+                if(d!=0){
+                    cout<<".";
+                    d--;
+                }
+                else {
+                    cout<<"#";
+                    dg++;
+                }
+                if(dg==2){
+                    d=2;
+                    dg=0;
+                }
+            }
         }
-        else{
-            h++;
-            cout<<".";
-        }
-        h==1;
+        dgg++;
+        if(dgg==2){
+            ds++;
+            dgg=0;
         }
         cout<<endl;
     }
