@@ -9,7 +9,6 @@ void solve() {
     cin>>n;
     string s;
     cin>>s;
-    // vector<string>ans;
     int i=0;
     int add=1;
     while(i<n){
@@ -17,7 +16,6 @@ void solve() {
         i+=add;
         add++;
     }
-
 }
 
 int main() {
