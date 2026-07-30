@@ -1,23 +1,29 @@
 #include <bits/stdc++.h>
- 
 using namespace std;
- 
-const int MAX = 200007;
-const int MOD = 1000000007;
- 
+
+#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL);
+#define ll long long
+
 void solve() {
-	for (int r = 0; r < 8; r++) {
-		for (int c = 0; c < 8; c++) {
-			char x;
-			cin >> x;
-			if (x != '.') {cout << x;}
-		}
-	}	
-	cout << '\n';
+	int a[3];
+	for(int &i:a){
+		cin>>i;
+	}
+	sort(a,a+3);
+	if(a[1]!=a[2]){
+		cout<<"NO"<<endl;
+	}
+	else{
+		cout<<"YES"<<endl<<a[0]<<" "<<a[0]<<" "<<a[2]<<endl;
+	}
 }
- 
+
 int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
-	int tt; cin >> tt; for (int i = 1; i <= tt; i++) {solve();}
+	fast_io;
+	int t = 1;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
 }
