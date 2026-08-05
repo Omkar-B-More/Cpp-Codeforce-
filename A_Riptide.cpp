@@ -5,36 +5,12 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    int a,b,c;
-    int bada=0;
-    int medium = 0;
-    cin>>a>>b>>c;
-    if((a==b)||(a==c)||(b==c)){
-        cout<<0<<endl;
-        return;
+    int v[3];
+    for(int i=0;i<3;i++){
+        cin>>v[i];
     }
-    if(b<a&&c<a){
-        bada=a;
-        if(c<b){
-            medium=b;
-        }
-        else{medium=c;}
-    }
-    else if(a<b&&c<b){
-        bada=b;
-        if(c<a){
-            medium=a;
-        }
-        else{medium=c;}
-    }
-    else if(a<c&&b<c){
-        bada=c;
-        if(a<b){
-            medium=b;
-        }
-        else{medium=a;}
-    }
-    cout<<bada-medium<<endl;
+    sort(v,v+3);
+    cout<<min(v[1]-v[0],v[2]-v[1])<<endl;
 }
 
 int main() {
