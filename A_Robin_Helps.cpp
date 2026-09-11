@@ -5,18 +5,20 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    string s;
-    cin>>s;
-    for(char c='a';c<='h';c++){
-        if(c!=s[0]){
-            cout<<c<<s[1]<<endl;
+    int n,k,ans=0,col=0,zero=0;
+    cin>>n>>k;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        if(a[i]>=k){
+            col+=a[i];
+        }
+        if(col!=0){
+            ans++;
+            col--;
         }
     }
-    for(char c='1';c<='8';c++){
-        if(c!=s[1]){
-            cout<<s[0]<<c<<endl;
-        }
-    }
+    cout<<ans<<endl;
 }
 
 int main() {

@@ -5,17 +5,19 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    string s;
-    cin>>s;
-    for(char c='a';c<='h';c++){
-        if(c!=s[0]){
-            cout<<c<<s[1]<<endl;
+    int a,b;
+    cin>>a>>b;
+    int arr[a][a];
+    for(int i=0;i<a;i++){
+        for(int j=0;j<a;j++){
+            cin>>arr[i][j];
         }
     }
-    for(char c='1';c<='8';c++){
-        if(c!=s[1]){
-            cout<<s[0]<<c<<endl;
+    for(int i=0;i<a;i+=b){
+        for(int j=0;j<a;j+=b){
+            cout<<arr[i][j]<<" ";
         }
+        cout<<endl;
     }
 }
 
